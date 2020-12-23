@@ -4,7 +4,7 @@ step-runner-config:
   - implementer: SOPS
 
   global-defaults:
-    organization: ploigos-ref
+    organization: platform
     application-name: ref-quarkus-mvn-jenkins-std
     service-name: fruit
 

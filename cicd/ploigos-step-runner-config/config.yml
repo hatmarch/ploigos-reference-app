@@ -28,10 +28,7 @@ step-runner-config:
   push-artifacts:
   - implementer: Maven
 
-  create-container-image:
-  - implementer: Buildah
-    config:
-      destination: localhost/tssc-reference-app-quarkus-rest-json
+  create-container-image: []
 
   push-container-image:
   - implementer: Skopeo

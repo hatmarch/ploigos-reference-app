@@ -41,8 +41,9 @@ step-runner-config:
   - implementer: CurlPush
   - implementer: RekorLog
     config:
-      rekor-server-url: http://rekor-server-tssc-demo-rekor.apps.cluster-3627.3627.example.opentlc.com/
-      artifact-signature-file-path: artifact.asc
+#      trigger-environment: PROD
+      rekor-server-url: 'http://rekor-server.tssc-demo-rekor.svc.cluster.local:3000'
+
 
   container-image-static-compliance-scan:
   # sample scans using DataStream file (preferred)
@@ -111,6 +112,10 @@ step-runner-config:
   - implementer: Configlint
     config:
       rules: cicd/ValidateEnv/
+  # - implementer: RekorLog
+  #   config:
+  #     trigger-environment: PROD
+  #     rekor-server-url: 'http://rekor-server.tssc-demo-rekor.svc.cluster.local:3000'
 
   uat:
   - implementer: MavenSeleniumCucumber

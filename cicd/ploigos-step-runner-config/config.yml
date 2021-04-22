@@ -51,8 +51,8 @@ step-runner-config:
     implementer: OpenSCAP
     config:
       oscap-input-definitions-uri: https://atopathways.redhatgov.io/compliance-as-code/scap/ssg-rhel8-ds.xml
-      oscap-tailoring-uri: https://raw.githubusercontent.com/ploigos/ploigos-example-oscap-content/main/xccdf_com.redhat.ploigos_profile_example_ubi8-tailoring-xccdf.xml
-      oscap-profile: xccdf_com.redhat.ploigos_profile_example_ubi8
+      oscap-tailoring-uri: https://mwh-demo-assets.s3-ap-southeast-2.amazonaws.com/ploigos/customised-profile.xml
+      oscap-profile: xccdf_org.ssgproject.content_profile_standard_customized
 
   #- name: OpenSCAP - Compliance - Standard System Security Profile for Red Hat Enterprise Linux 8
   #  implementer: OpenSCAP
@@ -90,7 +90,7 @@ step-runner-config:
   - name: OpenSCAP - Vulnerability - DataStream
     implementer: OpenSCAP
     config:
-      oscap-input-definitions-uri: https://www.redhat.com/security/data/metrics/ds/v2/RHEL8/rhel-8.ds.xml.bz2
+      oscap-input-definitions-uri: https://mwh-demo-assets.s3-ap-southeast-2.amazonaws.com/ploigos/rhel-8.ds.v2.xml.bz2
 
   # sample scans using OVAL file (if you must, but XCCDF is muuuuch better if availabe)
   #- name: OpenSCAP - Vulnerability - OVAL
